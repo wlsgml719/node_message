@@ -2,15 +2,15 @@
   "compilerOptions": {
     "strict": true,
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    // "declaration": true,
+    // "removeComments": true,
+    // "experimentalDecorators": true,
+    // "allowSyntheticDefaultImports": true,
     "target": "ES5",
-    "sourceMap": true,
+    // "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./src",
-    "incremental": true
+    "baseUrl": "./src"
+    // "incremental": true
   },
   "include": ["src/**/*"]
 }
