@@ -1,3 +1,4 @@
+import customError from "error/customError";
 import * as express from "express";
 import userRouter from "./user/user.route";
 
@@ -12,6 +13,7 @@ app.get("/", (req: express.Request, res: express.Response) => {
     throw e;
   }
 });
+
 app.use(userRouter);
 
 app.listen(port, () => {

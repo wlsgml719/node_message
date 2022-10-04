@@ -1,13 +1,13 @@
-export type User = {
+export type UserType = {
   id: Number;
   name: String;
   nickname: String;
   email: String;
-  freinds: Number[];
-  block: Number[];
+  freinds?: Number[];
+  block?: Number[];
 };
 
-export const UserList: User[] = [
+export const User: UserType[] = [
   {
     id: 1,
     name: "가",

@@ -1,13 +1,21 @@
 import { Router } from "express";
-import { UserList } from "../user/user.model";
+import { User } from "../user/user.model";
+import * as CustomError from "../error/customError";
 
 export const router = Router();
 
-router.get("/user/:id", (req, res) => {
+router.get("/users/:id", (req, res) => {
   try {
-    res.status(200);
-    res.send({ frends: UserList });
-  } catch (e: unknown) {}
+    const { id } = req?.params;
+
+    const user = User.find((user) => {
+      return user.id === parseInt(id);
+    });
+
+    res.status(200).send({ success: true, data: user });
+  } catch (e: unknown) {
+    res.status(400).send({ success: false });
+  }
 });
 
 export default router;
